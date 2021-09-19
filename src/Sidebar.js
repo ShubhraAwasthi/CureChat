@@ -7,7 +7,7 @@ import {SearchOutlined, PeopleAlt, Home} from "@material-ui/icons";
 import SidebarChat  from './Sidebarchat';
 import './Sidebar.css';
 import db from "./firebase";
-import { useStateValue } from './StateProvider';
+import {useStateValue} from './StateProvider';
 import {ExitToApp as LogOut} from "@material-ui/icons";
 import { Picker } from "emoji-mart";
 import {auth, provider} from "./firebase" ;
@@ -77,12 +77,12 @@ function Sidebar() {
             <div className="sidebar_header">
                 <Avatar src={user?.photoURL}/>
                 <div className="sidebar_header_right">
-                    <IconButton>
+                    {/* <IconButton>
                         <DonutLargeIcon />
                     </IconButton>
                     <IconButton>
                         <ChatIcon/>
-                    </IconButton>
+                    </IconButton> */}
                     <IconButton onClick={() => {
                         auth.signOut();
                         db.collection('users').doc(user.uid).set({

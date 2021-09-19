@@ -3,6 +3,7 @@ import './App.css';
 import Sidebar from "./Sidebar";
 import Chat from "./Chat";
 import Login from "./Login";
+import Landing from "./Landing";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import { useStateValue } from './StateProvider';
 import db from "./firebase";
@@ -14,10 +15,27 @@ const [{ user }, dispatch] = useStateValue();
   return (
     <div className="App">
       {!user ?(
-      <Login/>
-      ):(
+      // <Router>
+
+      // <Landing/>
+      // <Route path="/login">
+      //     <Login/>
+      // </Route>
+      // </Router>
+
+      <Router>
+      <Switch>
+        <Route path="/" exact component={Landing}/>
         
-        <div className="app_body">
+        
+        <Route path="/login" exact component={Login}/>
+        
+      </Switch>
+      </Router>
+
+      ):(
+       
+      <div className="app_body">
       <Router>
         <Sidebar/>
           <Switch>
@@ -34,9 +52,9 @@ const [{ user }, dispatch] = useStateValue();
       </Router>
       </div>
       )}
-      
+      </div>
 
-    </div>
+    
   );
 }
 

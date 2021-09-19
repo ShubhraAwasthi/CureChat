@@ -1,8 +1,12 @@
 .App {
-  display: grid;
-  background-color: #dadbd3;
+  /* display: grid; */
+  /* background-color: #dadbd3; */
+  /* background-image: url(https://i.pinimg.com/originals/38/f4/9b/38f49bd65875a6376495375e75d63d16.jpg); */
+
   height:100vh;
   place-items: center;
+  margin-top: 10vh;
+  margin-left: 5vw;
 }
 
 .app_body {

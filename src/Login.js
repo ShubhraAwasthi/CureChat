@@ -1,12 +1,16 @@
-import React from 'react'
+import React,{useEffect, useState, Component} from 'react';
 import "./Login.css";
 import {Button} from "@material-ui/core";
-import {auth, provider} from "./firebase" ;
+import {auth, provider, updateProfile} from "./firebase" ;
 import { useStateValue } from './StateProvider';
 import { actionTypes , initialState} from './Reducer';
 import db from "./firebase";
 
-function Login() {
+      
+
+function Login()  {
+    const [input,setInput]=useState("");
+const [username,setUsername]=useState("");
     //useEffect((if())=>{},[auth.onAuthStateChanged])
     /*function 
      auth().onAuthStateChanged(function(user) {
@@ -42,11 +46,16 @@ function Login() {
     return (
     <div className="login">
         <div className="login_container">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/598px-WhatsApp.svg.png" alt="" />
+            <img src="http://clipart-library.com/img/1227873.jpg" alt="" />
             <div className="login_text">
-                <h1>Sign in to WhatsApp</h1>
+                <h1>Sign in to CureCheck</h1>
             </div>
+            {/* <form >
+                    <input value={input} onChange={e => setInput(e.target.value)} type="text" placeholder="Type username.."  />
+                    <button type="submit" onClick={setUsername(input)}>Send message</button>
+                </form> */}
             <Button onClick={signIn} >Sign in with Google</Button>
+
         </div>
     </div>
     )

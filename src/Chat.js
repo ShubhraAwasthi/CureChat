@@ -343,26 +343,26 @@ function Chat({type}) {
  
         <div className="chat" >
             <div className="chat_header">
-                <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`}/>
+                <Avatar src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwD5TQnbm26NO_NsCchJW2iT0IOZXDZ1nDamUZT96gzNpvZlpZaJRsjsKOVHQILALG1Zs&usqp=CAU`}/>
                 <div className="chat_header_info">
                     <h3>{roomName}</h3>
-                    <p>last seen{" "}
+                    <p>last interaction{" "}
                         {new Date(messages[messages.length -1]?.timestamp?.toDate()).toUTCString()}</p>
                 </div>
 
                 <div className="chat_header_right">
-                <IconButton>
+                {/* <IconButton>
                     <SearchOutlined/>
-                </IconButton>
+                </IconButton> */}
                 <IconButton>
                     <input id="attach-media" style={{ display: "none" }} accept="image/*" type="file" onChange={handleFile} />
                     <label style={{ cursor: "pointer", height: 24 }} htmlFor="attach-media">
                         <AttachFile/>
                     </label>
                 </IconButton>
-                <IconButton>
+                {/* <IconButton>
                     <DeleteForeverIcon onClick={deleteRoom}/>
-                </IconButton>
+                </IconButton> */}
             </div>
             </div>
 
