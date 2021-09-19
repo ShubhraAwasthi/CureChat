@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# CureCheck
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CureCheck is an app to help you meet and greet and talk to people about all the problems that you think is affecting your mental health. Login and meet people all over the world like you and doctors whose assistance might even help you.
+
+# Tech Stack used:
+- ReactJS
+- HTML
+- CSS
+- Firebase
 
 ## Available Scripts
 
